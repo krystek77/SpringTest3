@@ -77,16 +77,12 @@ public class User {
 	 * @param roles
 	 * @param operation
 	 */
-	public User(@NotNull String name, @NotNull String lastName, @NotNull String email, @NotNull String password,
-			@NotNull int active, Set<Role> roles, String operation) {
+	public User(@NotNull String name, @NotNull String lastName, @NotNull String email, @NotNull String password) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.active = active;
-		this.roles = roles;
-		this.operation = operation;
 	}
 
 	//GETTERS AND SETTERS

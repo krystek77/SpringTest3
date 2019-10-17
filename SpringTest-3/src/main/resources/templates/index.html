@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html xmlns="org.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>SpringTest3</h1>
-	
+	<h1>This is main page</h1>
+	<h2>User:</h2>
+	<span th:text="${name}"></span>
+	<span th:text="${lastName}"></span>
+	<span th:text="${user.getName()}"></span>
+	<span th:text="${user.getLastName()}"></span>
+	<h3>Our collection of users</h3>
+	<table>
+		<tr th:each="user: ${users}">
+			<td th:text="${user.getName()}"></td>
+			<td th:text="${user.getLastName()}"></td>
+			<td th:text="${user.getEmail()}"></td>
+		</tr>
+	</table>
+	<h3>Second list</h3>
+	<table>
+		<tr th:each="user: ${users}">
+			<td th:text="${user.getEmail()}"></td>
+			<td th:text="${user.getName()}"></td>
+			<td th:text="${user.getLastName()}"></td>
+			<td th:text="${user.getPassword()}"></td>
+		</tr>
+	</table>
+	<h3>Another list</h3>
+	<div>
+		<p th:each="user: ${users}">
+			<span th:text="${user.getName()}"></span>
+			<span th:text="${user.getLastName()}"></span>
+			<span th:text="${user.getPassword()}"></span>
+			<span th:text="${user.getEmail()}"></span>
+			<span th:text="${user.getActive()}"></span>
+		</p>
+	</div>
 </body>
 </html>
