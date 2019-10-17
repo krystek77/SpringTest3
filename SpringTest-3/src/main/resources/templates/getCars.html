@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>GET CARS - /getCars</h1>
+	<p>it is work
+	<p>
+	<table>
+		<tr th:each="car : ${cars}">
+			<td th:text="${car.getMark()}"></td>
+			<td th:text="${car.getModel()}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>

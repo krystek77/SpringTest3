@@ -1,12 +1,11 @@
 package com.wronakrystian.domain;
 
-
 public class Car {
 	private String mark;
 	private String model;
 	
 	public Car() {
-		this("No mark","No model");
+		
 	}
 	
 	
