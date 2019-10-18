@@ -20,7 +20,6 @@ public class CarAPI {
 	@RequestMapping(value = "/getCars",method = RequestMethod.GET)
 	public List<Car> getCars() {
 		System.out.println("/getCars with object convert to json");
-		
 		return carManager.getCars();
 	}
 	@RequestMapping(value="/getCarsForView",method = RequestMethod.GET)
